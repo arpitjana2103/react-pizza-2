@@ -1,7 +1,6 @@
 const cardStyle = {
     display: "flex",
     gap: "1rem",
-    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
     padding: "1rem",
 };
 

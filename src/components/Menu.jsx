@@ -1,5 +1,10 @@
 import Pizza from "./Pizza";
 
+const menuBoxStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+};
+
 function Menu() {
     return (
         <div>
@@ -10,7 +15,7 @@ function Menu() {
                 veniam. Cupiditate quis dolorem quae, qui corrupti ipsam
                 adipisci exercitationem ut dicta voluptas.
             </p>
-            <div>
+            <div style={menuBoxStyle}>
                 <Pizza />
                 <Pizza />
                 <Pizza />
