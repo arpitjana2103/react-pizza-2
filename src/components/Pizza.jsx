@@ -1,5 +1,3 @@
-import pizzaData from "../data/data";
-
 const cardStyle = {
     display: "flex",
     gap: "1rem",
@@ -20,14 +18,20 @@ function Pizza(props) {
     const { name, ingredients, price, photoName, soldOut } = props.pizzaData;
 
     return (
-        <div style={cardStyle}>
+        <div
+            style={
+                !soldOut ? cardStyle : { ...cardStyle, filter: "grayscale(1)" }
+            }
+        >
             <div>
                 <img style={imgStyle} src={`./${photoName}`} alt={`${name}`} />
             </div>
             <div style={detailsStyle}>
                 <p>{name}</p>
                 <p>{ingredients}</p>
-                <p style={{ marginTop: "auto" }}>$ {price}</p>
+                <p style={{ marginTop: "auto" }}>
+                    {soldOut ? "SOLDOUT" : `$ ${price}`}
+                </p>
             </div>
         </div>
     );
